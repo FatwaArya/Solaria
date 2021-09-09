@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
+@font-face {
+    font-family: "league-spartan";
+    src: url(media/font/LeagueSpartan-Bold.otf);
+}
 
 
 *{
@@ -9,23 +12,25 @@
 }
 
 .bg-img{
-    background-image: url("media/1x/Artboard\ 1.png");
-    min-height: 800px;
+    background-image: url("media/4x/Asset\ 1@4x.png");
+    min-height: 937px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
+
 }
 .navbar{
+    padding-top: 60px;
     display: flex;
     justify-content: center;
-    padding-top: 40px;
+    
 }
 
 .nav-link a{
     font-family: "Montserrat",sans-serif;
-    font-weight: 500;
-
+    font-weight: 400;
+    font-size: x-large;
     padding: 20px;
     color: rgb(243, 238, 248);
    text-decoration: none;
@@ -33,17 +38,73 @@
 }
 
 .centered-text{
-    display: flex;
-    font-family: "Bebas Neue", normal;
-    font-weight: 300;
+   
     letter-spacing: 2px;
     position: absolute;
+    top: 50%;
+    bottom: 15px;
+    right: 15px;
+    left: 50%;
     color: #fff;
     transform: translate(-50%, -50%);
     font-size: 1.5em;
     
 }
 .solaria{
-    justify-content: center;
-    align-items: center;
+    
+    left: 0;
+    position:absolute;
+    text-align:center;
+    top: 30px;
+    width: 100%
+}
+
+.solaria h1{
+    font-family: "league-spartan", normal;
+    font-weight: bold;
+    color: #B122FE;
+   padding-bottom: 15px;
+}
+
+.solaria p{
+    font-family: "Montserrat", normal;
+    font-weight: 200;
+   
+    padding-bottom: 185px;
+}
+.button{
+    background-color: #1B1464;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius:  10px;
+    cursor: pointer;
+}   
+.button:hover{
+background-color: #36307e;
+}
+.button a{
+    font-family: "Montserrat",sans-serif;
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+}
+/* about */
+.about-container{
+    font-family: "Montserrat",sans-serif;
+   
+    text-align: center;
+  padding-top: 100px;
+  padding-bottom:300px;
+  padding-left:300px;
+  padding-right:300px;
+}
+
+.about-container h1{
+
+    padding-bottom: 30px;
 }
