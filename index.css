@@ -12,13 +12,23 @@
 }
 
 .bg-img{
-    background-image: url("media/4x/Asset\ 1@4x.png");
+    background-image: url("media/4x/Asset\ 2@4x.png");
     min-height: 937px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
 
+}
+
+.bg-img::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #070C36,transparent);
+    z-index: 1000;
 }
 .navbar{
     padding-top: 60px;
@@ -99,12 +109,22 @@ background-color: #36307e;
    
     text-align: center;
   padding-top: 100px;
-  padding-bottom:300px;
+  padding-bottom:200px;
   padding-left:300px;
   padding-right:300px;
+
+  position: relative;
+  background:#070C36;
+
 }
 
 .about-container h1{
-
-    padding-bottom: 30px;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #fff;
+}
+.about-container p{
+    font-size:1em;
+    margin-bottom: 30px;
+    color: #fff;
 }
