@@ -33,16 +33,21 @@
     z-index: 1000;
 } */
 .navbar{
-    padding-top: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
+    transition: 0.6s;
+    padding: 60px;
+  
 }
-.navbar solid {
-    background-color: #490D40;
-    transition: background-color 1s ease 0s;
-    box-shadow: 0 0 4px grey;
-
-      }
+.navbar.sticky{
+    padding: 20px 100px;
+    background: #1B1464;
+   
+}
 .nav-link a{
     font-family: "Montserrat",sans-serif;
     font-weight: 400;
@@ -128,27 +133,26 @@ background-color: #36307e;
 }
 .sticker1 img{
     left:80px;
-    
-   position: absolute;
+    float: left;
     width: 200px;
    padding-right: 30px;
 }
 .sticker2 img{
     right:20px;
-    
-   position: absolute;
+    float:right;
+ 
     width: 200px;  
 }
 
 .sticker3 img{
   right:20px;
-   position: absolute;
+   float:right;
     width: 200px;  
     
   ;
 }
 .sticker4 img{
-    position: absolute;
+ 
     float: left;
     width: 200px;  
 }
@@ -254,7 +258,7 @@ background-color: #36307e;
         padding-bottom: 13px;
     }
     .blog-text a{
-        background-color: #020A2E;;
+        background-color: #020A2E;
         color: #fff;
         text-decoration: none;
         cursor: pointer;
