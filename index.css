@@ -41,13 +41,14 @@
     justify-content: center;
     
     padding: 60px;
-  
+    
 }
 .navbar.sticky{
     position: fixed;
     padding: 20px 100px;
-    background: #1B1464;
-    transition: 0.6s;
+    background: #020A2E;
+    transition: 0.4s;
+  
    
 }
 .nav-link a{
@@ -96,6 +97,7 @@
     padding-bottom: 185px;
 }
 .button{
+    
     background-color: #1B1464;
     border: none;
     color: white;
@@ -112,7 +114,7 @@ background-color: #36307e;
 }
 .button a{
     font-family: "Montserrat",sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     color: white;
     text-decoration: none;
 }
@@ -191,7 +193,7 @@ background-color: #36307e;
 }
 .blog-text{
     font-family: "Montserrat",sans-serif;
-    padding-left: 10px;
+    padding-left: 15px;
 
 }
 .blog-text span{
@@ -219,7 +221,7 @@ background-color: #36307e;
 /* footer */
 .footer-container{
     display:flex;
-    background-color:#1B1464;
+    background-color:#020A2E;
     justify-content: space-evenly;
     padding: 100px;
 }
