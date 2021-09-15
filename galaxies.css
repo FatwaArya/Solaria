@@ -20,16 +20,22 @@
     color: #fff;
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: flex-start;
 }
+.navbar h1{
+    padding: 10px;
 
+}
 .title{
     font-family: "Bebas Neue",sans-serif;
     font-weight: 400;
     font-size:30px;
     text-align: center;
     padding: 20px;
+   
 }
+
 .content{
     margin-bottom: 720px;
 }

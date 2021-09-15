@@ -13,6 +13,22 @@
     box-sizing: border-box;
 }
 
+#top{
+    display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color:#6b62ca; /* Set a background color */
+
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 1px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  
+ 
+}
 .bg-img{
     background-image: url("media/4x/Asset\ 2@4x.png");
     min-height: 937px;
@@ -46,7 +62,7 @@
 .navbar.sticky{
     position: fixed;
     padding: 20px 100px;
-    background: #020A2E;
+    background: #1B1464;
     transition: 0.4s;
   
    
@@ -118,6 +134,9 @@ background-color: #36307e;
     color: white;
     text-decoration: none;
 }
+
+/* to top */
+
 /* about */
 .about-container{
     padding: 100px;
@@ -207,7 +226,7 @@ background-color: #36307e;
     padding-bottom: 50px;
 }
 .blog-text a{
-    background-color: #020A2E;
+    background-color: #1B1464;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
@@ -221,7 +240,7 @@ background-color: #36307e;
 /* footer */
 .footer-container{
     display:flex;
-    background-color:#020A2E;
+    background-color:#1B1464;
     justify-content: space-evenly;
     padding: 100px;
 }
@@ -262,7 +281,7 @@ background-color: #36307e;
         padding-bottom: 13px;
     }
     .blog-text a{
-        background-color: #020A2E;
+        background-color: #1B1464;
         color: #fff;
         text-decoration: none;
         cursor: pointer;
