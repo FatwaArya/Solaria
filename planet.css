@@ -12,8 +12,13 @@
 }
 .header {
     background-color: #020A2E;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    
 }
 .navbar{
+    
     font-family: "Montserrat",sans-serif;
     font-weight: 400;
     padding: 10px;
@@ -23,11 +28,15 @@
     text-align: center;
     justify-content: flex-start;
 }
+.materi{
+    padding-top: 100px;
+}
 .navbar h1{
     padding: 10px;
 
 }
 .main-text{
+   
     font-family: "Montserrat",sans-serif;
 }
 .title{
@@ -43,6 +52,7 @@
     align-items: center;
     padding-right: 300px;
     padding-left: 300px;
+    padding-bottom: 50px;
 }
 .planet{
     padding-right: 300px;
@@ -53,4 +63,92 @@
 .planet img{
     width: 288px;
     height: 216px;
+}
+.planet{
+    font-family: "Montserrat",sans-serif; 
+    padding-top:50px;
+    padding-bottom: 50px;
+    
+}
+hr{
+    width:500px;
+    margin: auto;
+    
+    
+}
+.fact{
+    font-family: "Montserrat",sans-serif; 
+    text-align: center;
+    padding-top:10px;
+}
+.mercury{
+
+    display:flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+.venus{
+    display:flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.earth{
+    display:flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.mars{
+    display:flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.jupiter{
+    display:flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.saturn{
+    display:flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.uranus{
+    display:flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.neptune{
+    display:flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* footer */
+.footer-container{
+    display:flex;
+    background-color:#1B1464;
+    justify-content: space-evenly;
+    padding: 100px;
+}
+.footer-col{
+    font-family: "Montserrat",sans-serif;
+    color: #fff;
+    
+}
+.footer-col li,a{
+    text-decoration: none;
+    color: #fff;
+    list-style: none;
+    padding-top: 5px;
+}
+.footer-col ul{
+    padding-top: 10px;
+   
+}
+.footer-col hr{
+    width: 154px;
+}
+.footer-col a:hover{
+    color: #6f4acc;
+
 }
