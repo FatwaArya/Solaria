@@ -9,6 +9,7 @@
 *{
     padding:0;
     margin:0;
+  
 }
 .header {
     background-color: #020A2E;
@@ -22,10 +23,11 @@
     align-items: center;
     text-align: center;
     justify-content: flex-start;
+    margin-bottom: 200px;
+
 }
 .navbar h1{
     padding: 10px;
-
 }
 .title{
     font-family: "Bebas Neue",sans-serif;
@@ -36,9 +38,7 @@
    
 }
 
-.content{
-    margin-bottom: 720px;
-}
+  
 .galaxies{
     display:flex;
     justify-content: space-evenly;
@@ -87,6 +87,49 @@
       0 0 60px 20px #fff,  /* inner white */
       0 0 60px 20px #f0f, /* middle magenta */
       0 0 140px 20px #0ff; /* outer cyan */
+}
+
+
+
+/* rumus */
+.rumus-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    margin-bottom: 500px;
+
+}
+.rumus-container a{
+    color: black;
+}
+
+.luasPersegi{
+    padding: 20px;
+    border-radius:20px;
+    border: 1px black solid;
+    cursor: pointer;
+
+}
+.kelilingPersegi{
+    padding: 20px;
+    border-radius:20px;
+    border: 1px black solid;
+    cursor: pointer;
+
+}
+.luasPersegiPanjang{
+    padding: 20px;
+    border-radius:20px;
+    border: 1px black solid;
+    cursor: pointer;
+
+}
+.kelilingPersegiPanjang{
+    padding: 20px;
+    border-radius:20px;
+    border: 1px black solid;
+    cursor: pointer;
+
 }
 
 /* footer */
