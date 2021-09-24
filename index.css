@@ -90,6 +90,12 @@
     font-size: 1.5em;
     
 }
+.register{
+    padding-top:10px;
+    font-family: "Montserrat",sans-serif;
+    font-size: 10px;
+    text-decoration: underline;
+}
 .solaria{
     
     left: 0;
@@ -270,6 +276,10 @@ background-color: #36307e;
 
 
 @media (max-width: 941px) {
+
+
+
+
     .blog-text span{
         font-weight: 400;
         font-size:12px;

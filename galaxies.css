@@ -38,7 +38,7 @@
    
 }
 
-  
+
 .galaxies{
     display:flex;
     justify-content: space-evenly;
@@ -93,6 +93,7 @@
 
 /* rumus */
 .rumus-container{
+    font-family: "Montserrat",sans-serif;
     display:flex;
     flex-wrap: wrap;
     justify-content:space-around;
