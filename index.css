@@ -31,7 +31,7 @@
 }
 .bg-img{
     background-image: url("media/4x/Asset\ 2@4x.png");
-    min-height: 937px;
+    min-height: 1050px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -61,7 +61,7 @@
 }
 .navbar.sticky{
     position: fixed;
-    padding: 20px 100px;
+    padding: 20px ;
     background: #1B1464;
     transition: 0.4s;
   
@@ -71,7 +71,8 @@
     font-family: "Montserrat",sans-serif;
     font-weight: 400;
     font-size: x-large;
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20   px;
     color: rgb(243, 238, 248);
    text-decoration: none;
    list-style: none;
@@ -93,7 +94,7 @@
 .register{
     padding-top:10px;
     font-family: "Montserrat",sans-serif;
-    font-size: 10px;
+    font-size: 15px;
     text-decoration: underline;
 }
 .solaria{
@@ -230,6 +231,7 @@ background-color: #36307e;
 }
 .blog-text p{
     padding-bottom: 50px;
+    
 }
 .blog-text a{
     background-color: #1B1464;
@@ -272,8 +274,16 @@ background-color: #36307e;
     color: #6f4acc;
 
 }
-/* media quries */
-
+/* media queries */
+@media screen and (max-width:1200px){
+    .text{
+        padding: 0px;
+    }
+    .blog-text p{
+        display: none;
+    }
+    
+}
 
 @media (max-width: 941px) {
 
