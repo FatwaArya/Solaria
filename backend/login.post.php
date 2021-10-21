@@ -11,7 +11,7 @@ if($_POST){
     //user table and admin tabel
     // so there is two queries
      $sql_user=mysqli_query($conn,"select * from user where username = '".$username."' and password = '".md5($password)."' " );
-     $sql_admin=mysqli_query($conn,"select * from admin where username = '".$username."' and password = '".md5($password)."' " );
+     $sql_admin=mysqli_query($conn,"select * from admin where username = '".$username."' and password = '".$password."' " );
     //validate user
     
     //validate admin
@@ -31,7 +31,7 @@ if($_POST){
             $_SESSION['id']=$dt_login['id'];
             $_SESSION['username']=$dt_login['username'];
             $_SESSION['name']=$dt_login['name'];
-            
+            $_SESSION['p_picture']=$dt_login['profile_picture'];
             $_SESSION['status_login']=true;
                 header('location: ./dashboard/admin-dashboard.php');
        

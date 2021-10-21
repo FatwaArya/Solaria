@@ -1,4 +1,4 @@
-//nulis session 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -181,6 +181,9 @@
           <div class="navbar">
             <a href="index.html"><box-icon name='left-arrow-alt'color = 'white' size='lg'></box-icon></a> 
             <h1>Solaria.learn</h1>
+          </div>
+          <div class="temporary-logout">
+              <a href="./logout.php">logout</a>
           </div>
     </div>
 

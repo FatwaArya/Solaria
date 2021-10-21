@@ -1,3 +1,9 @@
+<?php 
+session_start();
+if($_SESSION['status_login']!=true){
+  header('location: login.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +15,9 @@
 </head>
 <body>
 
-<h1>hello admin <?=$_SESSION['name']  ?></h1>
+<h1>hello admin <?= $_SESSION['name']  ?></h1>
+<h1><a href="../logout.php">logout</a></h1>
+  
 <table class="table table-dark">
   <thead>
     <tr>
