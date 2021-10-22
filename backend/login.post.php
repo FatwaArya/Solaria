@@ -46,7 +46,7 @@ if($_POST){
                 $_SESSION['name']=$dt_login['name'];
                 
                 $_SESSION['status_login']=true;
-                header('location: galaxies.php');
+                header('location: index(login).php');
                   
                 
                

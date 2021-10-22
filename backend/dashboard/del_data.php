@@ -6,8 +6,7 @@ $id = $_GET['id'];
         $qry_hapus=mysqli_query($conn,"delete from user where id='".$id."'");
         
         if($qry_hapus){
-            echo "<script>alert('delete success ');
-            location.href='admin-dashboard.php';";
+                header("location: admin-dashboard.php");
         } else {
             echo "<script>alert('delete failed');
             location.href='tampil_siswa.php';</script>";

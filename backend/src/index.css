@@ -30,8 +30,8 @@
  
 }
 .bg-img{
-    background-image: url("assets/image_processing20210812-29565-naq5p9.png");
-    min-height: 1050px;
+    background-image: url("assets/4x/1.png");
+        min-height: 1050px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

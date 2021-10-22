@@ -1,9 +1,11 @@
+
 <?php 
 session_start();
 if($_SESSION['status_login']!=true){
   header('location: login.php');
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,23 +13,102 @@ if($_SESSION['status_login']!=true){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solaria! -- admin</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    
+
+
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+      @font-face {
+      font-family: "league-spartan";
+      src: url(media/font/LeagueSpartan-Bold.otf);
+      }
+
+
+      *{
+    padding:0;
+    margin:0;
+  
+    } 
+.header {
+  display: flex;
+    background-color: #020A2E;
+    height: 72px;
+}
+.navbar{
+    font-family: "Montserrat",sans-serif;
+    font-weight: 400;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+    
+
+}
+    .main{
+      background-image: url("/");
+      min-height: 1050px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-left: 100px;
+      margin-right: 100px;
+
+    }
+    .salute{
+     
+      display: flex;
+      justify-content: space-between;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+
+    .pure-table{
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      background-color: none;
+     
+    }
+   .action{
+     align-items: center;
+   }
+
+    </style>
 </head>
 <body>
+ <div class="header">
+        <div class="navbar">
+          <a href="galaxies.html"><box-icon name='left-arrow-alt'color = 'white' size='lg'></box-icon></a> 
+          <h1>Solaria</h1>
 
-<h1>hello admin <?= $_SESSION['name']  ?></h1>
-<h1><a href="../logout.php">logout</a></h1>
+        </div>
+    
+  </div>
+  <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
   
-<table class="table table-dark">
+    <div class="main">
+    <div class="salute">
+    <h3>Hello, <?= $_SESSION['name']  ?></h3>
+    <h3><a href="../logout.php">logout</a></h3>
+  </div>
+
+  
+<table class="pure-table">
   <thead>
     <tr>
-      <th scope="col">no</th>
+      <th scope="col">#</th>
       <th scope="col">Username</th>
       <th scope="col">Name</th>
       <th scope="col">email</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
+
   <tbody>
         <?php 
         include '../conn.php';
@@ -47,10 +128,10 @@ if($_SESSION['status_login']!=true){
 
 
 
-    <td>
-        <a href="user_update.php? id= <?php echo $data_siswa['id']?>" class="btn btn-success">Change</a> 
+    <td name="action">
+        <a href="user_update.php? id= <?php echo $data_siswa['id']?>" class="pure-button pure-button-primary">Change</a> 
         
-        | <a href="del_data.php?    id= <?php  echo $data_siswa['id']?> " class="btn btn-danger">Delete</a>
+        | <a href="del_data.php?    id= <?php  echo $data_siswa['id']?> " class="pure-button pure-button-error">Delete</a>
     
     </td>
 
@@ -61,5 +142,9 @@ if($_SESSION['status_login']!=true){
     
   </tbody>
 </table>
+
+    </div>
+  
 </body>
 </html>
+
