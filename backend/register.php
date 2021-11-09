@@ -13,11 +13,13 @@
     text-decoration: none;
 }
     </style>
+    <link rel="icon" href="/assets/4x/space.png" type = "image/x-icon">
+
 </head>
 <body>
     <section class="vh-100" style=" background-image: url('../assets/hero.svg') ;
     
-    width: 1920px;
+   
     
     background-position: center; 
     background-repeat: no-repeat; 

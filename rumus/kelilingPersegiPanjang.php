@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solaria! | Luas Persegi</title>
+    <title>Solaria! | Keliling Persegi Panjang</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
-<link rel="stylesheet" href="allRumusNav.css">
-<link rel="icon" href="../media/4x/space.png" type = "image/x-icon">
-  </head>
+    <link rel="stylesheet" href="./allRumusNav.css">
+    <link rel="icon" href="../media/4x/space.png" type = "image/x-icon">
+</head>
 <body>
     <div class="navbar-main">
         <div class="navbar">
@@ -24,11 +24,14 @@
     <div class="d-flex justify-content-center">
         <div class="card col-sm-4">
           <div class="card-header">
-            <h4>Hitung Luas Persegi</h4>
+            <h4>Hitung Keliling Persegi Panjang</h4>
           </div>
           <div class="card-body">
-              Sisi
+              Panjang
             <input type="number" id="panjang" class="form-control">
+            <br>
+              Lebar
+            <input type="number" id="lebar" class="form-control">
             <br>
            
 
@@ -43,8 +46,21 @@
           </div>
         </div>
       </div>
-  
       <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
-    <script src="luasPersegi.js"></script>
+      <script>
+
+        document.getElementById('hitung').addEventListener('click',function(){
+            let panjang = document.getElementById("panjang").value;
+            let lebar = document.getElementById("lebar").value;
+            let a= 2;
+            let tempPanjang = parseInt(panjang)
+            let templebar = parseInt(lebar)
+
+            let hasil = (templebar+tempPanjang)*a;
+
+            document.getElementById('hasil').value = hasil;
+
+          });
+      </script>
 </body>
 </html>

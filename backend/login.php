@@ -7,14 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-   
+    <link rel="icon" href="/assets/4x/space.png" type = "image/x-icon">
+
     <title>Login</title>
 </head>
 <body>
 
 <section class="vh-100" style=" background-image: url('../assets/hero.svg') ;
     
-    width: 1920px;
+ 
     
     background-position: center; 
     background-repeat: no-repeat; 
@@ -102,7 +103,7 @@ if($_POST){
                 $_SESSION['id']=$dt_login['id'];
                 $_SESSION['username']=$dt_login['username'];
                 $_SESSION['name']=$dt_login['name'];
-                
+                $_SESSION['img'] = $dt_login['profile_picture'];
                 $_SESSION['status_login']=true;
                 header('location: index(login).php');
                   

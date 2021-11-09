@@ -83,8 +83,9 @@ if($_SESSION['status_login']!=true){
 <body>
  <div class="header">
         <div class="navbar">
-          <a href="galaxies.html"><box-icon name='left-arrow-alt'color = 'white' size='lg'></box-icon></a> 
           <h1>Solaria</h1>
+         
+          <p>AD</p>
 
         </div>
     

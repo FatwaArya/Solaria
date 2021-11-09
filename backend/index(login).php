@@ -70,9 +70,21 @@ if($_SESSION['status_login']!=true){
             width: 100%;
             display: flex;
             justify-content: center;
-            
+            position: relative;
             padding: 60px;
             
+        }
+        .profile{
+            position: absolute;
+            
+            font-family: "Montserrat",sans-serif;
+            font-weight: 400;
+            font-size: x-large;
+           
+            color: rgb(243, 238, 248);
+           text-decoration: none;
+           list-style: none;
+           
         }
         .navbar.sticky{
             position: fixed;
@@ -335,19 +347,23 @@ if($_SESSION['status_login']!=true){
                  <a href="#about">About</a>
                  <a href="#blog">Blog</a>
                <a href="#contact">Contact</a>
+               <a href="">Profile</a>
+
+
             </ul>
-           
+         
         </div>
+        
         <div class="centered-text">
             <div class="solaria">
                  <h1>SOLARIA!</h1>
                  <h1 style="color: #fff">LEARN ABOUT OUR SOLAR SYSTEM</h1>
-            <p>An educational website dedicated for those who want to learn.
-                <br>Learn about our solar system and much more.
+                <p>Welcome , <?= $_SESSION['name']  ?>
             </p>
            
             <div class="button"> 
-                <a href="./galaxies.php">Learn Now  </a>
+                <a href="./galaxies.php">Learn Now</a>
+                
             </div>
             <div class="logout">
             <a href="./logout.php">logout</a>

@@ -182,11 +182,8 @@ if($_SESSION['status_login']!=true){
 <body>
     <div class="header">
           <div class="navbar">
-            <a href="./index.php"><box-icon name='left-arrow-alt'color = 'white' size='lg'></box-icon></a> 
+            <a href="./index(login).php"><box-icon name='left-arrow-alt'color = 'white' size='lg'></box-icon></a> 
             <h1>Solaria</h1>
-          </div>
-          <div class="temporary-logout">
-              <a href="./logout.php">logout</a>
           </div>
     </div>
 
@@ -200,7 +197,7 @@ if($_SESSION['status_login']!=true){
         <div class="main-container">
          <div class="galaxies">
                 <div class="milky-way" id="milkyway">
-                    <a href="planet.html">
+                    <a href="../planet.php">
 
                         <h3>Milky Way Galaxy</h3>
                     <p>The Milky Way is the galaxy that includes our Solar System, with the name describing the galaxy's appearance from Earth: a hazy band of light seen in the night sky formed from stars that cannot be individually distinguished by the naked eye.</p>
@@ -225,18 +222,18 @@ if($_SESSION['status_login']!=true){
     <div class="rumus-container">
 
     <div class="luasPersegi">
-        <a href="rumus/luasPersegi.html">Rumus Luas Persegi</a>
+        <a href="/rumus/luasPersegi.php">Rumus Luas Persegi</a>
     </div>
     <div class="kelilingPersegi">
-        <a href="rumus/kelilingPersegi.html">Rumus Keliling Persegi</a>
+        <a href="/rumus/kelilingPersegi.php">Rumus Keliling Persegi</a>
     </div>
 
 
     <div class="luasPersegiPanjang">
-        <a href="rumus/luasPersegiPanjang.html">Rumus Luas Persegi Panjang</a>
+        <a href="/rumus/luasPersegiPanjang.php">Rumus Luas Persegi Panjang</a>
     </div>
     <div class="kelilingPersegiPanjang">
-        <a href="rumus/kelilingPersegiPanjang.html">Rumus Keliling Persegi Panjang</a>
+        <a href="/rumus/kelilingPersegiPanjang.php">Rumus Keliling Persegi Panjang</a>
     </div>
 
 
