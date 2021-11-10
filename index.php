@@ -13,7 +13,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
         @font-face {
             font-family: "league-spartan";
-            src: url(media/font/LeagueSpartan-Bold.otf);
+            src: url(assets/font/LeagueSpartan-Bold.otf);
         }
         
         
@@ -83,7 +83,7 @@
             font-weight: 400;
             font-size: x-large;
             padding-left: 20px;
-            padding-right: 20   px;
+            padding-right: 20px;
             color: rgb(243, 238, 248);
            text-decoration: none;
            list-style: none;
@@ -522,7 +522,7 @@
         </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script src="app.js"></script>
+   <script src="./app.js"></script>
    <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
 </body>
 </html>

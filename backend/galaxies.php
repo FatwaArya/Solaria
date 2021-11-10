@@ -17,7 +17,7 @@ if($_SESSION['status_login']!=true){
             @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
             @font-face {
                 font-family: "league-spartan";
-                src: url(media/font/LeagueSpartan-Bold.otf);
+                src: url(../assets/font/LeagueSpartan-Bold.otf);
             }
 
 
@@ -213,16 +213,16 @@ if($_SESSION['status_login']!=true){
       
 
     </div>
-<!-- latihan -->
+    <!-- latihan -->
     <div class="rumus-rumus">
     <div class="title">
         <h2>Rumus-rumus</h2>
-       
+
     </div>
     <div class="rumus-container">
 
     <div class="luasPersegi">
-        <a href="../rumus/luasPersegi.php">Rumus Luas Persegi</a>
+        <a href="/rumus/luasPersegi.php">Rumus Luas Persegi</a>
     </div>
     <div class="kelilingPersegi">
         <a href="/rumus/kelilingPersegi.php">Rumus Keliling Persegi</a>
@@ -243,8 +243,7 @@ if($_SESSION['status_login']!=true){
 
 
         </div>
-   
-
+<!--    download materi-->
 
 
 

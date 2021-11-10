@@ -10,7 +10,7 @@ if($_POST){
     //buat 2 tabel 
     //user table and admin tabel
     // so there is two queries
-     $sql_user=mysqli_query($conn,"select * from user where username = '".$username."' and password = '".md5($password)."' " );
+     $sql_user=mysqli_query($conn,"select * from user where username = '".$username."' and password = '".md5($password)."' ");
      $sql_admin=mysqli_query($conn,"select * from admin where username = '".$username."' and password = '".$password."' " );
     //validate user
     

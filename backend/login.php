@@ -35,7 +35,8 @@
             <div class="d-flex justify-content-center">
               <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-                <p class="text-center h1 fw-bold mb-2 mx-1 mx-md-4 mt-4" ><a class ="text-decoration-none text-white" href="index.php">Solaria!</a></p>
+
+                  <a class ="text-decoration-none text-white" href="../index.php"><p class="text-center h1 fw-bold mb-2 mx-1 mx-md-4 mt-4" >Solaria!</p></a>
               
 
                 <form action="login.php"  method="post" >
@@ -69,7 +70,8 @@ if($_POST){
     //buat 2 tabel 
     //user table and admin tabel
     // so there is two queries
-     $sql_user=mysqli_query($conn,"select * from user where username = '".$username."' and password = '".md5($password)."' " );
+
+    $sql_user=mysqli_query($conn,"select * from user where username = '".$username."' and password = '".md5($password)."' " );
      $sql_admin=mysqli_query($conn,"select * from admin where username = '".$username."' and password = '".$password."' " );
     //validate user
     
@@ -118,12 +120,6 @@ if($_POST){
           </div>
     
 <?php  }}
-    
-
-
-            
-      
-
 }?>
 
 

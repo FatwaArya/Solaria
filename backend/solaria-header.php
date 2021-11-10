@@ -16,7 +16,7 @@ if($_SESSION['status_login']!=true){
       @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
       @font-face {
       font-family: "league-spartan";
-      src: url(media/font/LeagueSpartan-Bold.otf);
+      src: url(../assets/font/LeagueSpartan-Bold.otf);
       }
 
 

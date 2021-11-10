@@ -17,7 +17,7 @@ if($_SESSION['status_login']!=true){
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
         @font-face {
             font-family: "league-spartan";
-            src: url(media/font/LeagueSpartan-Bold.otf);
+            src: url(../assets/font/LeagueSpartan-Bold.otf);
         }
         
         
@@ -99,7 +99,7 @@ if($_SESSION['status_login']!=true){
             font-weight: 400;
             font-size: x-large;
             padding-left: 20px;
-            padding-right: 20   px;
+            padding-right: 20px;
             color: rgb(243, 238, 248);
            text-decoration: none;
            list-style: none;
@@ -538,33 +538,8 @@ if($_SESSION['status_login']!=true){
          
         </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   <script >
-       window.addEventListener("scroll", function(){
-    let navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('sticky', window.scrollY >800);
-})
-// sticky tutorialhttps://www.youtube.com/watch?v=6HFpw5fcaD8
-
-
-//Get the button:
-let mybutton = document.getElementById("top");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 400) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-//bottom to top https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
-
-
-   </script>
-   <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+        <script src="../app.js"></script>
+        <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
 </body>
+
 </html>
