@@ -1,3 +1,8 @@
+<?php 
+session_start();
+if($_SESSION['status_login']!=true){
+  header('location: login.php');
+} ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +16,7 @@
 <body>
     <div class="header">
         <div class="navbar">
-          <a href="galaxies.html"><box-icon name='left-arrow-alt'color = 'white' size='lg'></box-icon></a> 
+          <a href="./backend/galaxies.php"><box-icon name='left-arrow-alt'color = 'white' size='lg'></box-icon></a> 
           <h1>Solaria.learn</h1>
         </div>
   </div>
@@ -43,7 +48,7 @@ The Sun and its planets are located on the inner edge of one of the Milky Way’
     </div>
       <div class="planet">
           <div class="mercury">
-              <img src="media/planet/mercury.png" alt="">
+              <img src="./assets/planet/mercury.png" alt="">
 
               <p>Mercury is the closest planet to the Sun at a distance of 57 million kilometers / 35 million miles.
                 Out of all the terrestrial planets, Mercury is the smallest. It is also the smallest planet in the Solar System.
@@ -62,7 +67,7 @@ The Sun and its planets are located on the inner edge of one of the Milky Way’
           </div>
 
           <div class="venus">
-              <img src="media/planet/venus.png" alt="">
+              <img src="./assets/planet/venus.png" alt="">
               <p>Venus is the second planet from the Sun, and the sixth-largest planet in the Solar System.
                 Venus and Mercury are the only planets in the Solar System that do not have a moon.
                 Venus is the second brightest object in the sky after the Moon, and the Sun.
@@ -78,7 +83,7 @@ The Sun and its planets are located on the inner edge of one of the Milky Way’
                 Venus is very similar to Earth, and because of this, it is referred to as Earth’s sister.</p>
           </div>
           <div class="earth">
-            <img src="media/planet/earth.png" alt="">
+            <img src="./assets/planet/earth.png" alt="">
             <p>Earth is the third planet from the Sun and our home planet.
               Earth revolves around the Sun, but its average distance from it is 149 million kilometers / 93 million miles. In astronomy, this is 1 AU – or an astronomical unit.
               Scientists have researched and estimated that our Earth is around 4.5 billion years old.
@@ -95,7 +100,7 @@ The Sun and its planets are located on the inner edge of one of the Milky Way’
               Earth has only one satellite – the Moon, but it also has a couple of temporal artificial satellites.</p>
           </div>
           <div class="mars">
-            <img src="media/planet/mars.png" alt="">
+            <img src="./assets/planet/mars.png" alt="">
             <p>Mars is the fourth planet from the Sun and the second-smallest planet of the Solar System.
               Mars is the most widely searched planet for life, inspiring many works of fiction.
               The first person to observe Mars with the use of a telescope was Galileo Galilei. He observed the Red Planet in 1610.
@@ -114,7 +119,7 @@ The Sun and its planets are located on the inner edge of one of the Milky Way’
               Mars represents masculinity and the symbol of the planet is used for the male gender.</p>
           </div>
           <div class="jupiter">
-            <img src="media/planet/jupiter.png" alt="">
+            <img src="./assets/planet/jupiter.png" alt="">
             <p>Jupiter is the fifth planet from the Sun and the biggest planet of our Solar System. Some consider it a failed star since it is made out of swirling gases and liquids such as 90% hydrogen, and 10% helium – very similar to the Sun.
               Jupiter is the fourth brightest object in the sky and one of the five visible planets ( Mercury, Venus, Mars, Saturn ).
               The envelope of gases – atmosphere – surrounding Jupiter is the largest planetary atmosphere in the Solar System. It makes up almost the entire planet. Basically, it doesn’t have a true surface with its atmosphere reaching altitudes of 5.000 km / 1.864 mi.
@@ -129,7 +134,7 @@ The Sun and its planets are located on the inner edge of one of the Milky Way’
               In a way, Jupiter is the Solar System’s vacuum cleaner, because of its powerful gravity which attracts many of the comets and asteroids to hit it rather than other planets.</p>
           </div>
           <div class="saturn">
-            <img src="media/planet/saturn.png" alt="">
+            <img src="./assets/planet/saturn.png" alt="">
             <p>Saturn is the sixth planet from the Sun with the largest planetary rings in the Solar System.
               It is the second-largest planet in the Solar System after Jupiter.
               Saturn has a radius of 58.232 kilometers / 36.183 miles and a diameter of 120.536 km / 74.897 mi.
@@ -146,7 +151,7 @@ The Sun and its planets are located on the inner edge of one of the Milky Way’
               Saturn’s composition together with its atmosphere influences its color, giving it a brownish-yellow appearance.</p>
           </div>
           <div class="uranus">
-            <img src="media/planet/uranus.png" alt="">
+            <img src="./assets/planet/uranus.png" alt="">
             <p>Uranus is the seventh planet from the Sun, and the third-largest planet in the Solar System It is the biggest of the ice giants.
               Uranus is 2.9 billion kilometers / 1.8 billion miles away from the Sun.
               Uranus has a radius of 25.362 km / 15.759 mi, and a diameter of 51.118 km or 31.763 mi.
@@ -163,7 +168,7 @@ The Sun and its planets are located on the inner edge of one of the Milky Way’
               Another moon of Uranus, Miranda, is one of the strangest objects in the Solar System. It has a very deformed landscape with strange and hard to explain patters.</p>
           </div>
           <div class="neptune">
-            <img src="media/planet/neptune.png" alt="">
+            <img src="./assets/planet/neptune.png" alt="">
             <p>Neptune is the farthest planet from the Sun at an average distance of 4.5 billion kilometers / 2.8 billion miles.
               Neptune is the fourth-largest planet in the Solar System and the smallest of the gas giants.
               Both Neptune and Uranus are termed ice giants since they have different compositions than Saturn and Jupiter.

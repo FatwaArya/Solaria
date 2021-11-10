@@ -214,7 +214,7 @@ if($_SESSION['status_login']!=true){
 
     </div>
 <!-- latihan -->
-<div class="rumus-rumus">
+    <div class="rumus-rumus">
     <div class="title">
         <h2>Rumus-rumus</h2>
        
@@ -222,7 +222,7 @@ if($_SESSION['status_login']!=true){
     <div class="rumus-container">
 
     <div class="luasPersegi">
-        <a href="/rumus/luasPersegi.php">Rumus Luas Persegi</a>
+        <a href="../rumus/luasPersegi.php">Rumus Luas Persegi</a>
     </div>
     <div class="kelilingPersegi">
         <a href="/rumus/kelilingPersegi.php">Rumus Keliling Persegi</a>

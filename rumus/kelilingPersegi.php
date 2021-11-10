@@ -1,3 +1,8 @@
+<?php 
+session_start();
+if($_SESSION['status_login']!=true){
+  header('location: login.php');
+} ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +18,7 @@
 <body>
     <div class="navbar-main">
         <div class="navbar">
-          <a href="../galaxies.html"><box-icon name='left-arrow-alt'color = 'white' size='lg'></box-icon></a> 
+          <a href="../backend/galaxies.php"><box-icon name='left-arrow-alt'color = 'white' size='lg'></box-icon></a> 
           <h1>Solaria.learn</h1>
         </div>
   </div>
