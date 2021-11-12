@@ -121,23 +121,11 @@ if($_POST){
     
 <?php  }}
 }?>
-
-
-
-
                     <div class="d-flex justify-content-sm-between mx-3 pb-4">
                       <button type="submit" class=" btn btn-dark btn-lg  border border-info"  >login</button>
-                     
-
-                    
                     </div>
-
-                    
-
                 </form>
-
               </div>
-           
             </div>
           </div>
         </div>
