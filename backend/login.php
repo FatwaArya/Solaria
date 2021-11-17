@@ -102,7 +102,7 @@ if($_POST){
                 
                 $dt_login=mysqli_fetch_assoc($sql_user);
                 session_start();
-                $_SESSION['id']=$dt_login['id'];
+                $_SESSION['id_user']=$dt_login['id'];
                 $_SESSION['username']=$dt_login['username'];
                 $_SESSION['name']=$dt_login['name'];
                 $_SESSION['img'] = $dt_login['profile_picture'];

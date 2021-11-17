@@ -301,6 +301,17 @@ if($_SESSION['status_login']!=true){
             color: #6f4acc;
         
         }
+        .logout{
+            font-family: "Montserrat",sans-serif;
+            font-size: medium;
+            margin-top: 1.2rem;
+        }
+        .logout:hover{
+
+            background-color: #1B1464;
+            transition: background-color, 0.5ms;
+        }
+
         /* media queries */
         @media screen and (max-width:1200px){
             .text{
@@ -363,8 +374,13 @@ if($_SESSION['status_login']!=true){
            
             <div class="button"> 
                 <a href="./galaxies.php">Learn Now</a>
-                
+
             </div>
+                or
+                <div class="button">
+
+                    <a href="./galaxies.php">Buy Planet</a>
+                </div>
             <div class="logout">
             <a href="./logout.php">logout</a>
 
