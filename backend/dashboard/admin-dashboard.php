@@ -74,14 +74,14 @@ if ($_SESSION['status_login'] != true) {
         </tbody>
     </table>
     <div class="tool">
-        
+
         <h3 class="util1">Utilities</h3>
 
         <ul class="util2">
-            <li > <a class="util-list" href="addmaterial.php">Add Subject</a></li>
-            <li ><a class="util-list" href="addProduct.php">Add Product</a></li>
+            <li><a class="util-list" href="addMaterial.php">Add Subject</a></li>
+            <li><a class="util-list" href="addProduct.php">Add Product</a></li>
         </ul>
-       
+
     </div>
 
 

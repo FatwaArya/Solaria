@@ -99,16 +99,17 @@ if ($_SESSION['status_login'] != true) {
         }
 //                $result = move_uploaded_file($file['tmp_name'], $uploadPath);
 
-        $uploadPath = 'product_img/' . $_SESSION['name'].'/'.basename($_FILES['file']['name']);
+        $uploadPath = 'product_img/' . $_SESSION['name'] . '/' . $_FILES['file']['name'];
 
-
+        $fileName = basename($uploadPath);
 
         if(move_uploaded_file($_FILES['file']['tmp_name'], $uploadPath))
         {
 
             $date = date('Y-m-d H:i:s');
-            $sql = "insert into product (product_name, price ,qty ,description,status , file) values ('".$productName."','".$price."','".$qty."','".$desc."','".$uploadPath."')";
+            $sql = "INSERT INTO `product` (`id_product`, `product_name`, `price`, `qty`, `description`, `status`, `img`) VALUES (NULL, '$productName', '$price', '$qty', '$desc', '1', '$fileName')";
             $result = $conn->query($sql);
+
 
         }
 
@@ -155,26 +156,29 @@ if ($_SESSION['status_login'] != true) {
                     <td><?= $solaria_product['product_name'] ?> </td>
                     <td>under construction</td>
                     <td><?= $solaria_product['price'] ?></td>
-                    <td><?php if ($solaria_product['status'] ){
-                        echo "Barang Tersedia";
-                        }else{
-                        echo "Barang Terjual";
-                        }?></td>
+                    <td><?php if ($solaria_product['status']) {
+                            echo "Barang Tersedia";
+                        } else {
+                            echo "Barang Terjual";
+                        } ?></td>
                     <td><?= $solaria_product['description'] ?></td>
                     <td><?= $solaria_product['qty'] ?></td>
 
 
                     <td class="action" name="action">
-                        <a href="user_update.php? id= <?php echo $solaria_product['id'] ?>"
+                        <a href="user_update.php? id= <?php echo $solaria_product['id_product'] ?>"
                            class="pure-button pure-button-primary">Change</a>
-                         <a href="del_data.php?    id= <?php echo $solaria_product['id'] ?> "
-                             class="pure-button pure-button-error">Delete</a>
+                        <a href="delProduct.php?id= <?php echo $solaria_product['id_product'] ?> "
+                           class="pure-button pure-button-error">Delete</a>
 
                     </td>
 
                 </tr>
                 <?php
+
             }
+
+
             ?>
 
             </tbody>

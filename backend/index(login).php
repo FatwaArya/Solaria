@@ -297,27 +297,32 @@ if($_SESSION['status_login']!=true){
         .footer-col hr{
             width: 154px;
         }
-        .footer-col a:hover{
+
+        .footer-col a:hover {
             color: #6f4acc;
-        
+
         }
-        .logout{
-            font-family: "Montserrat",sans-serif;
+
+        .logout {
+            font-family: "Montserrat", sans-serif;
             font-size: medium;
             margin-top: 1.2rem;
+            color: white;
         }
-        .logout:hover{
 
-            background-color: #1B1464;
-            transition: background-color, 0.5ms;
+        .logout:hover {
+
+            color: #1B1464;
+            transition: color, 0.5ms;
         }
 
         /* media queries */
-        @media screen and (max-width:1200px){
-            .text{
+        @media screen and (max-width: 1200px) {
+            .text {
                 padding: 0px;
             }
-            .blog-text p{
+
+            .blog-text p {
                 display: none;
             }
             
