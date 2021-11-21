@@ -112,14 +112,14 @@ if($_POST){
                 
                
             }else{?>
-           <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <strong>Holy guacamole!</strong> You should check again your username and password!
-             <button type="button" class="close" data-dismiss="alert" aria-label="hidden">
-                <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-    
-<?php  }}
+            <div class="alert alert-danger alert-dismissible fade show fixed-top px-4" role="alert">
+                <strong>Holy guacamole!</strong> You should check again your username and password!
+                <button type="button" class="close" data-dismiss="alert" aria-label="hidden">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+        <?php  }}
 }?>
                     <div class="d-flex justify-content-sm-between mx-3 pb-4">
                       <button type="submit" class=" btn btn-dark btn-lg  border border-info"  >login</button>

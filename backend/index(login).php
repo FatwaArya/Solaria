@@ -1,9 +1,4 @@
-<?php 
-session_start();
-if($_SESSION['status_login']!=true){
-  header('location: login.php');
-} ?>
-
+<?php include 'session_start.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +6,9 @@ if($_SESSION['status_login']!=true){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solaria! | Home</title>
-    
-    <link rel="icon" href="../assets/4x/space.png" type = "image/x-icon">    <style>
+
+    <link rel="icon" href="../assets/4x/space.png" type="image/x-icon">
+    <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
         @font-face {
@@ -367,35 +363,35 @@ if($_SESSION['status_login']!=true){
 
 
             </ul>
-         
-        </div>
-        
-        <div class="centered-text">
-            <div class="solaria">
-                 <h1>SOLARIA!</h1>
-                 <h1 style="color: #fff">LEARN ABOUT OUR SOLAR SYSTEM</h1>
-                <p>Welcome , <?= $_SESSION['name']  ?>
-            </p>
-           
-            <div class="button"> 
-                <a href="./galaxies.php">Learn Now</a>
 
             </div>
-                or
-                <div class="button">
 
-                    <a href="./galaxies.php">Buy Planet</a>
+            <div class="centered-text">
+                <div class="solaria">
+                    <h1>SOLARIA!</h1>
+                    <h1 style="color: #fff">LEARN ABOUT OUR SOLAR SYSTEM</h1>
+                    <p>Welcome, <?= $_SESSION['name'] ?>
+                    </p>
+
+                    <div class="button">
+                        <a href="./galaxies.php">Learn Now</a>
+
+                    </div>
+                    or
+                    <div class="button">
+
+                        <a href="storeSolaria.php">Marketplace</a>
+                    </div>
+                    <div class="logout">
+                        <a href="./logout.php">logout</a>
+
+                    </div>
                 </div>
-            <div class="logout">
-            <a href="./logout.php">logout</a>
-
-            </div>
             </div>
         </div>
+
+
     </div>
-
-
-</div>
    <!-- to top -->
     <div class="up-top" id="top">
         <a href="#">
