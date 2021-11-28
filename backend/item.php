@@ -167,7 +167,7 @@ $dt_product = mysqli_fetch_array($qry_product_detail);
                 <tr>
                     <td>In Stock</td>
                     <td> <?php
-
+                        $final_qty = 0;
                         if (!empty($_SESSION["cart"]) && is_array($_SESSION["cart"])) {
                             foreach (@$_SESSION['cart'] as $product_key => $product_val) {
                                 if (empty($product_val['qty'] && $product_val['qty'] > $dt_product['qty'])) {
@@ -175,8 +175,10 @@ $dt_product = mysqli_fetch_array($qry_product_detail);
                                     if ($temp_qty === 0) {
                                         echo '<p class="sold-out" id="sold-out">SOLD OUT</p>';
                                     } else {
-                                        echo $dt_product['qty'] - $product_val['qty'];
-                                    }
+                                        $final_qty = $dt_product['qty'] - $product_val['qty'];
+                                        ?>
+                                        <p> <?= $final_qty ?></p>
+                                    <?php }
                                 }
 
 
@@ -227,7 +229,7 @@ $dt_product = mysqli_fetch_array($qry_product_detail);
     function checkQty() {
         let buy_qty = document.getElementById('buy-qty').value;
 
-        if (buy_qty > <?= $dt_product['qty']?>) {
+        if (buy_qty > <?= $final_qty ?>) {
             alert('Barang tidak cukup');
             document.getElementById('buy-qty').value = 1;
             event.preventDefault();

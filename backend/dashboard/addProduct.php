@@ -107,13 +107,11 @@
         if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadPath)) {
 
             $date = date('Y-m-d H:i:s');
-            $sql = "INSERT INTO `product` (`id_product`, `product_name`, `price`, `qty`, `description`, `status`, `img`) VALUES (NULL, '$productName', '$price', '$qty', '$desc', '1', '$fileName')";
-            $result = $conn->query($sql);
+            $sql = "INSERT INTO `product` (`id_product`, `product_name`, `price`, `qty`, `description`, `status`, `img`)
+                VALUES (NULL, '" . $productName . "', '" . $price . "', '" . $qty . "', '" . $desc . "', 'true', '" . $fileName . "')";
+            mysqli_query($conn, $sql);
 
-
-        }
-
-        else {
+        } else {
 
             echo "Problem uploading file";
 
