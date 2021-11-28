@@ -50,25 +50,33 @@
         }
 
         img {
-            width: 240px;
-            height: 180px;
+            object-fit: cover;
+            width: 12.5rem;
+            height: 12.5rem;
             border-radius: 5px 5px 0 0;
             align-items: center;
+
+
         }
 
         .flex-display {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             flex-direction: row;
-            justify-content: flex-start;
-            gap: 0.5em;
-            margin: 2.4rem 2rem 0 2rem;
+            gap: 1rem 2.5em;
+            margin-top: 2rem;
+            margin-left: 10rem;
+            margin-right: 10rem;
+
+
         }
 
         .item-list {
-            padding: 0.5em 1rem;
-            padding-top: 1em;
+            /*padding: 2%;*/
 
+            /*flex-basis: 16%;*/
+            cursor: pointer;
         }
 
         .container {
@@ -77,6 +85,7 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             transition: 0.3s;
             border-radius: 5px; /* 5px rounded corners */
+
 
         }
 
@@ -87,6 +96,8 @@
 
         .item-body {
             padding-top: 1.2em;
+            padding: 0.5em 1rem;
+
         }
 
         .price-qty {
@@ -112,9 +123,16 @@
 
         }
 
+        .desc {
+            width: 170px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     </style>
 </head>
 <body>
+
 
 <div class="header">
     <div class="navbar">
@@ -132,36 +150,60 @@
     $qry_product = mysqli_query($conn, "select * from product"); ?>
 
     <?php while ($dt_product = mysqli_fetch_array($qry_product)) { ?>
-    <a href="index(login).php">
+
         <div class="container">
             <div class="item-list">
-                <a href="index(login).php"><img src="dashboard/product_img/fatwa@admin/<?= $dt_product['img'] ?>"
-                                                alt=""></a>
-
+                <a href="item.php?id_product=<?= $dt_product['id_product'] ?>"></a>
+                <img src="dashboard/product_img/<?= $dt_product['img'] ?>" alt="">
                 <div class="item-body">
 
                     <h4><?= $dt_product['product_name'] ?></h4>
-                    <p><?= $dt_product['description'] ?></p>
+                    <div class="desc">
+                        <p><?= $dt_product['description'] ?></p>
+                    </div>
+
                     <div class="price-qty">
                         <strong> SR <?= $dt_product['price'] ?></strong>
+                        <!---->
+                        <!--                        --><?php
+                        //                                if (!empty($_SESSION["cart"]) && is_array($_SESSION["cart"])) {
+                        //                                    foreach (@$_SESSION['cart'] as $product_key => $product_val){
+                        //                                        if (empty($product_val['qty'] && $product_val['qty']> $dt_product['qty'])){
+                        //                                            echo $dt_product['qty']  - $product_val['qty'];}
+                        //
+                        //
+                        //
+                        //                                                    }
+                        //                                    if ($dt_product['qty'] == 0) {
+                        //                                        ?>
+                        <!--                                        <p class="sold-out" id="sold-out">SOLD OUT</p>-->
+                        <!--                                    --><?php //} else {
+                        //                                        echo $dt_product['qty'];
+                        //                                    }
+                        //
+                        //                                } ?>
 
-                        <?= $dt_product['qty'] ?>
+
                     </div>
                 </div>
 
             </div>
 
         </div>
-        <?php } ?>
+    <?php }
+    ?>
+
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script>
     $(".item-list").click(function () {
         window.location = $(this).find("a").attr("href");
         return false;
     });
+
 </script>
 </body>
 </html>

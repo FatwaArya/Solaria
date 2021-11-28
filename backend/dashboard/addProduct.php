@@ -40,12 +40,18 @@
             display: inline-block;
             vertical-align: middle;
         }
+
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
-    /*    https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp*/
+
+        /*    https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp*/
+
+        .log bot {
+            margin-bottom: 10rem;
+        }
     </style>
     <?php include 'admin-css.php' ?>
 </head>
@@ -81,7 +87,7 @@
 <!--    //status error at db and php-->
     <?php
     include '../conn.php';
-    if (isset($_POST['sumbit'])){
+    if (isset($_POST['sumbit'])) {
         $productName = $_POST['productName'];
         $price = $_POST['price'];
         $qty = $_POST['qty'];
@@ -89,18 +95,16 @@
         $file = $_FILES['file'];
 
 
-
-        if (!is_dir('product_img/' . $_SESSION['name'].'/')) {
-            mkdir('product_img/' . $_SESSION['name'].'/');
+        if (!is_dir('product_img/')) {
+            mkdir('product_img/');
         }
 //                $result = move_uploaded_file($file['tmp_name'], $uploadPath);
 
-        $uploadPath = 'product_img/' . $_SESSION['name'] . '/' . $_FILES['file']['name'];
+        $uploadPath = 'product_img/' . $_FILES['file']['name'];
 
         $fileName = basename($uploadPath);
 
-        if(move_uploaded_file($_FILES['file']['tmp_name'], $uploadPath))
-        {
+        if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadPath)) {
 
             $date = date('Y-m-d H:i:s');
             $sql = "INSERT INTO `product` (`id_product`, `product_name`, `price`, `qty`, `description`, `status`, `img`) VALUES (NULL, '$productName', '$price', '$qty', '$desc', '1', '$fileName')";
@@ -119,14 +123,14 @@
     }
     ?>
     <div class="log">
-        <legend class="dt-log"><strong>Data Log</strong></legend>
+        <legend class="dt-log"><strong>Product Log</strong></legend>
         <table class="pure-table">
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Barang</th>
-                <th scope="col">Pembeli</th>
-                <th scope="col">Harga</th>
+                <th scope="col">Product</th>
+
+                <th scope="col">Price</th>
                 <th scope="col">Status</th>
                 <th scope="col">Description</th>
                 <th scope="col">Quantity</th>
@@ -138,32 +142,37 @@
             <tbody>
             <?php
 
-            $sql = "select * from product ;";
+            $sql = "select * from product ";
             $result = mysqli_query($conn, $sql);
+            //inner join table for name
 
 
+            $sql_join = "SELECT product_detail.id_product, product.id_product, product.product_name , user.id , user.name ,product.price , product_detail.buy_qty 
+                    from product_detail
+              		INNER JOIN product on product_detail.id_product = product.id_product
+                    INNER join user on product_detail.id = user.id
+             ";
+            $result_join = mysqli_query($conn, $sql_join);
 
             $no = 0;
             while ($solaria_product = mysqli_fetch_array($result)) {
                 $no++; ?>
-                <tr class="pure-table-odd">
+                <tr class="pure-table">
 
                     <td><?= $no ?></td>
                     <td><?= $solaria_product['product_name'] ?> </td>
-                    <td>under construction</td>
+
                     <td><?= $solaria_product['price'] ?></td>
-                    <td><?php if ($solaria_product['status']) {
-                            echo "Barang Tersedia";
+                    <td><?php if ($solaria_product['status'] === "true") {
+                            echo "Product Available";
                         } else {
-                            echo "Barang Terjual";
+                            echo "Product Not Available";
                         } ?></td>
                     <td><?= $solaria_product['description'] ?></td>
                     <td><?= $solaria_product['qty'] ?></td>
 
 
                     <td class="action" name="action">
-                        <a href="user_update.php? id= <?php echo $solaria_product['id_product'] ?>"
-                           class="pure-button pure-button-primary">Change</a>
                         <a href="delProduct.php?id= <?php echo $solaria_product['id_product'] ?> "
                            class="pure-button pure-button-error">Delete</a>
 
@@ -174,15 +183,67 @@
 
             }
 
+            ?>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="log bot">
+        <legend class="dt-log"><strong>Buyer Log</strong></legend>
+        <table class="pure-table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Buy quantity</th>
+                <th scope="col">Buy date</th>
+                <th scope="col">Total Price</th>
+
+            </tr>
+            </thead>
+
+            <tbody>
+            <?php
+
+            //inner join table for name
+            $sql_join = "SELECT product_detail.id_product, product.id_product, product.product_name , user.id , user.name ,product.price , product_detail.buy_qty , product_detail.transaction_date
+                    from product_detail
+              		INNER JOIN product on product_detail.id_product = product.id_product
+                    INNER join user on product_detail.id = user.id
+             ";
+            $result_join = mysqli_query($conn, $sql_join);
+
+            $no = 0;
+            while ($solaria_product = mysqli_fetch_array($result_join)) {
+                $no++; ?>
+                <tr class="pure-table">
+
+                    <td><?= $no ?></td>
+                    <td><?= $solaria_product['product_name'] ?> </td>
+                    <td><?= $solaria_product['name'] ?> </td>
+
+                    <td><?= $solaria_product['price'] ?></td>
+                    <td><?= $solaria_product['buy_qty'] ?></td>
+                    <td><?= $solaria_product['transaction_date'] ?></td>
+                    <td><?= $solaria_product['buy_qty'] * $solaria_product['price'] ?></td>
+
+
+                </tr>
+                <?php
+
+            }
 
             ?>
 
             </tbody>
         </table>
     </div>
+
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script >
+<script>
     $(document).ready(function() {
         $('.minus').click(function () {
             var $input = $(this).parent().find('input');

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="PhpProjectServersManager">
     <servers>
-      <server host="localhost" id="aba338e4-abc2-4bb7-af3d-651d6d145820" name="Unnamed" />
+      <server host="localhost" id="aba338e4-abc2-4bb7-af3d-651d6d145820" name="localhost" />
     </servers>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />

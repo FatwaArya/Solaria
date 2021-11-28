@@ -43,12 +43,12 @@
         $file = $_FILES['file'];
 
 
-        if (!is_dir('uploads/' . $_SESSION['name'] . '/')) {
-            mkdir('uploads/' . $_SESSION['name'] . '/');
+        if (!is_dir('uploads/')) {
+            mkdir('uploads/');
         }
 //                $result = move_uploaded_file($file['tmp_name'], $uploadPath);
 
-        $uploadPath = 'uploads/' . $_SESSION['name'] . '/' . $_FILES['file']['name'];
+        $uploadPath = 'uploads/' . $_FILES['file']['name'];
         $fileName = basename($uploadPath);
 
 
@@ -103,7 +103,7 @@
                         <a href="user_update.php? id= <?php echo $solaria_subject['id_subject'] ?>"
                            class="button-small pure-button pure-button-primary">Change</a>
 
-                        <a href="delMateri.php?id= <?php echo $solaria_subject['id_subject'] ?> "
+                        <a href="delSubject.php?id= <?php echo $solaria_subject['id_subject'] ?> "
                            class=" pure-button pure-button">Delete</a>
 
                     </td>

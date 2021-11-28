@@ -350,26 +350,26 @@
         </style>
 </head>
 <body>
-    <!-- Header -->
-    <div Class ="header">
-        <div class="bg-img"  >     
-            <div class="navbar" id="navbar">
+<!-- Header -->
+<div Class="header">
+    <div class="bg-img">
+        <div class="navbar" id="navbar">
             <ul class="nav-link">
-                 <a href="#">Home</a>
-                 <a href="#about">About</a>
-                 <a href="#blog">Blog</a>
-               <a href="#contact">Contact</a>
-               <a href="">Profile</a>
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+                <a href="cart.php">Cart</a>
 
 
             </ul>
 
-            </div>
+        </div>
 
-            <div class="centered-text">
-                <div class="solaria">
-                    <h1>SOLARIA!</h1>
-                    <h1 style="color: #fff">LEARN ABOUT OUR SOLAR SYSTEM</h1>
+        <div class="centered-text">
+            <div class="solaria">
+                <h1>SOLARIA!</h1>
+                <h1 style="color: #fff">LEARN ABOUT OUR SOLAR SYSTEM</h1>
                     <p>Welcome, <?= $_SESSION['name'] ?>
                     </p>
 

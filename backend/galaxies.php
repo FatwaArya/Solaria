@@ -9,7 +9,9 @@
     <title>Solaria! | Pick your Galaxies</title>
 
     <link rel="icon" href="media/4x/space.png" type="image/x-icon">
-
+    <link rel="stylesheet"
+          href="//cdn.jsdelivr.net/combine/npm/purecss@2.0.6/build/tables-min.css,npm/purecss@2.0.6/build/grids-min.css,npm/purecss@2.0.6/build/forms-min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css"/>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
@@ -108,9 +110,7 @@
 
         .materi {
             font-family: "Montserrat", sans-serif;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+
             margin-bottom: 200px;
         }
 
@@ -283,15 +283,15 @@ include 'conn.php';
 $sql = 'select * from materi';
 $result = mysqli_query($conn, $sql); ?>
 
-<div class="materi">
+<div class="pure-g materi">
     <?php while ($materi = mysqli_fetch_assoc($result)) { ?>
 
 
-        <div class="main-materi">
+        <div class="pure-u-1-5 main-materi">
             <h3><?php echo $materi['nama_materi'] ?></h3>
             <p><?php echo $materi['description'] ?></p>
             <p>created at <?php echo $materi['date'] ?></p>
-            <a href=" dashboard/<?php echo $materi['file'] ?>" target="_blank">Download</a>
+            <a href=" dashboard/uploads/<?php echo $materi['file'] ?>" target="__blank">Download</a>
         </div>
     <?php } ?>
 </div>

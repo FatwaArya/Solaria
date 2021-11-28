@@ -21,7 +21,7 @@ if ($id) {
 //    }
 
 
-    $path = 'uploads/' . $_SESSION['name'] . '/' . $delSubject['file'];
+    $path = 'uploads/' . $delSubject['file'];
 
 
     if ($qry_hapus && file_exists($path)) {

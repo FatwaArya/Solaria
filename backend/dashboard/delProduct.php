@@ -20,7 +20,7 @@ if ($id) {
 //    }
 
 
-    $path = 'product_img/' . $_SESSION['name'] . '/' . $delProduct['img'];
+    $path = 'product_img/' . $delProduct['img'];
 
 
     if ($qry_hapus && file_exists($path)) {
