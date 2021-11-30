@@ -145,12 +145,7 @@
             //inner join table for name
 
 
-            $sql_join = "SELECT product_detail.id_product, product.id_product, product.product_name , user.id , user.name ,product.price , product_detail.buy_qty 
-                    from product_detail
-              		INNER JOIN product on product_detail.id_product = product.id_product
-                    INNER join user on product_detail.id = user.id
-             ";
-            $result_join = mysqli_query($conn, $sql_join);
+
 
             $no = 0;
             while ($solaria_product = mysqli_fetch_array($result)) {
@@ -161,7 +156,7 @@
                     <td><?= $solaria_product['product_name'] ?> </td>
 
                     <td><?= $solaria_product['price'] ?></td>
-                    <td><?php if ($solaria_product['status'] === "true") {
+                    <td><?php if ($solaria_product['status'] === "true" && $solaria_product['qty'] === "0") {
                             echo "Product Available";
                         } else {
                             echo "Product Not Available";
@@ -206,10 +201,10 @@
             <?php
 
             //inner join table for name
-            $sql_join = "SELECT product_detail.id_product, product.id_product, product.product_name , user.id , user.name ,product.price , product_detail.buy_qty , product_detail.transaction_date
+            $sql_join = "SELECT product_detail.id_product, product.id_product, product.product_name , account.id , account.name ,product.price , product_detail.buy_qty , product_detail.transaction_date
                     from product_detail
               		INNER JOIN product on product_detail.id_product = product.id_product
-                    INNER join user on product_detail.id = user.id
+                    INNER join account on product_detail.id = account.id
              ";
             $result_join = mysqli_query($conn, $sql_join);
 

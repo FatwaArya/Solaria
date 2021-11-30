@@ -6,8 +6,8 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-$sql = "insert into user (email, username,password,name) 
-        values ('".$email."','".$user."','".md5($password)."','".$name."')";
+$sql = "insert into account (email, username,password,name) 
+        values ('" . $email . "','" . $user . "','" . md5($password) . "','" . $name . "')";
 
 
         
@@ -16,7 +16,7 @@ $sql = "insert into user (email, username,password,name)
             header('Location: login.php');
         
         }else{
-            printf('Gagal Menambah'.mysqli_error($conn));
+            printf('Failed to register' . mysqli_error($conn));
             exit();
         }
         

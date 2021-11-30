@@ -38,7 +38,7 @@
         <tbody>
         <?php
         include '../conn.php';
-        $sql = "select * from user ;";
+        $sql = "select * from account ;";
         $result = mysqli_query($conn, $sql);
 
         $no = 0;
